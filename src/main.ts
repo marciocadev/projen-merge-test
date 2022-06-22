@@ -1,4 +1,5 @@
 import { App, CfnOutput, Stack, StackProps } from 'aws-cdk-lib';
+import { Bucket } from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
 
 export class MyStack extends Stack {
@@ -8,6 +9,7 @@ export class MyStack extends Stack {
     new CfnOutput(this, 'Output', {
       value: 'output',
     });
+    new Bucket(this, 'bucket');
   }
 }
 
